@@ -8,7 +8,7 @@ import re
 
 #Importer le dataset
 df = pd.read_csv('data_set.csv')
-print(df.head(0))
+print(df.head(5))
 
 #Traitement de la donnée retirer la ponctuation et les majs
 def remove_ponctuation(text):
@@ -17,5 +17,6 @@ def remove_ponctuation(text):
     text = text.lower()
     return(text)
 
+df['Text'] = df['Text'].apply(remove_ponctuation)
 
-print(remove_ponctuation(" Jas _ ' ( % deu: dheuu7 dudeUDEuoo +de"))
+print(df.head(5))
