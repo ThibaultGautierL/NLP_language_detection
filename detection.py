@@ -40,3 +40,5 @@ model_pipe.fit(X_traindata, Y_traindata)
 
 predicted_value = model_pipe.predict(X_testdata)
 print(f"{metrics.accuracy_score(Y_testdata, predicted_value) * 100:.2f} %")
+
+print(metrics.confusion_matrix(Y_testdata, predicted_value))
